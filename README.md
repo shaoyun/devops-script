@@ -20,5 +20,7 @@ firewall-cmd --reload
 
 由于source命令在脚本中不生效，所有需要手动执行source
 
+```
 source /etc/profile
 java -version
+```
