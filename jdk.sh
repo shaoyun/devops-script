@@ -36,3 +36,6 @@ export JRE_HOME=${JAVA_HOME}/jre
 export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
 export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 EOF
+
+echo "Please execute 'source /etc/profile' "
+echo "Please test by 'java -version' "
