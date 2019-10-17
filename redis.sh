@@ -171,7 +171,8 @@ Install_Redis()
     if [ -s /usr/local/redis/bin/redis-server ]; then
         echo "Redis server already exists."
     else
-        Download_Files http://download.redis.io/releases/${Redis_Stable_Ver}.tar.gz ${Redis_Stable_Ver}.tar.gz
+    	# Download_Files http://download.redis.io/releases/${Redis_Stable_Ver}.tar.gz ${Redis_Stable_Ver}.tar.gz
+        Download_Files https://mirrors.huaweicloud.com/redis/${Redis_Stable_Ver}.tar.gz ${Redis_Stable_Ver}.tar.gz
         Tar_Cd ${Redis_Stable_Ver}.tar.gz ${Redis_Stable_Ver}
 
         if [ "${Is_64bit}" = "y" ] ; then
