@@ -41,4 +41,4 @@ ExecStop=/data/apache-activemq-5.15.11/bin/activemq stop
 WantedBy=multi-user.target
 EOF
 systemctl enable activemq
-echo "Please run 'systemctl enable activemq' to start service"
+echo "Please run 'systemctl start activemq' to start service"
