@@ -21,6 +21,7 @@ URL=http://18.138.115.170:8080/downloads/apache-activemq-5.15.11-bin.tar.gz
 
 wget -c --progress=bar:force --prefer-family=IPv4 --no-check-certificate ${URL}
 tar zxf apache-activemq-5.15.11-bin.tar.gz
+mv ./apache-activemq-5.15.11 /data
 
 cat > /lib/systemd/system/activemq.service<<\EOF
 [Unit]
