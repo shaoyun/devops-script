@@ -16,12 +16,11 @@ fi
 
 cd ${cur_dir}/downloads
 
-URL=http://18.138.115.170:8080/downloads/apache-activemq-5.15.11-bin.tar.gz
-# URL=http://apache.mirror.iweb.ca//activemq/5.15.11/apache-activemq-5.15.11-bin.tar.gz
+URL=http://apache.mirror.iweb.ca/activemq/5.16.0/apache-activemq-5.16.0-bin.tar.gz
 
 wget -c --progress=bar:force --prefer-family=IPv4 --no-check-certificate ${URL}
-tar zxf apache-activemq-5.15.11-bin.tar.gz
-mv ./apache-activemq-5.15.11 /data
+tar zxf apache-activemq-5.16.0-bin.tar.gz
+mv ./apache-activemq-5.16.0 /data
 
 cat > /lib/systemd/system/activemq.service<<\EOF
 [Unit]
@@ -30,13 +29,13 @@ After=network.target
 
 [Service]
 Type=simple
-Environment=JAVA_HOME=/usr/local/java/jdk1.8.0_181
+Environment=JAVA_HOME=/usr/local/tool/java
 
-PIDFile=/data/apache-activemq-5.15.11/data/activemq.pid
+PIDFile=/data/apache-activemq-5.16.0/data/activemq.pid
 User=root
 Group=root
-ExecStart=/data/apache-activemq-5.15.11/bin/activemq start
-ExecStop=/data/apache-activemq-5.15.11/bin/activemq stop
+ExecStart=/data/apache-activemq-5.16.0/bin/activemq start
+ExecStop=/data/apache-activemq-5.16.0/bin/activemq stop
 
 [Install]
 WantedBy=multi-user.target
