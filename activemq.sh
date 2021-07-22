@@ -19,8 +19,8 @@ cd ${cur_dir}/downloads
 URL=https://apache.website-solution.net//activemq/5.16.2/apache-activemq-5.16.2-bin.tar.gz
 
 wget -c --progress=bar:force --prefer-family=IPv4 --no-check-certificate ${URL}
-tar zxf apache-activemq-5.16.0-bin.tar.gz
-mv ./apache-activemq-5.16.0 /data
+tar zxf apache-activemq-5.16.2-bin.tar.gz
+mv ./apache-activemq-5.16.2 /data
 
 cat > /lib/systemd/system/activemq.service<<\EOF
 [Unit]
@@ -31,11 +31,11 @@ After=network.target
 Type=simple
 Environment=JAVA_HOME=/usr/local/tool/java
 
-PIDFile=/data/apache-activemq-5.16.0/data/activemq.pid
+PIDFile=/data/apache-activemq-5.16.2/data/activemq.pid
 User=root
 Group=root
-ExecStart=/data/apache-activemq-5.16.0/bin/activemq start
-ExecStop=/data/apache-activemq-5.16.0/bin/activemq stop
+ExecStart=/data/apache-activemq-5.16.2/bin/activemq start
+ExecStop=/data/apache-activemq-5.16.2/bin/activemq stop
 
 [Install]
 WantedBy=multi-user.target
