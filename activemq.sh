@@ -16,7 +16,7 @@ fi
 
 cd ${cur_dir}/downloads
 
-URL=https://mirrors.bfsu.edu.cn/apache//activemq/5.16.0/apache-activemq-5.16.0-bin.tar.gz
+URL=https://apache.website-solution.net//activemq/5.16.2/apache-activemq-5.16.2-bin.tar.gz
 
 wget -c --progress=bar:force --prefer-family=IPv4 --no-check-certificate ${URL}
 tar zxf apache-activemq-5.16.0-bin.tar.gz
